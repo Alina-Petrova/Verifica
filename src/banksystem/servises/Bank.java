@@ -6,11 +6,10 @@
 package banksystem.servises;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.util.stream.Stream;
 
 /**
@@ -54,7 +53,6 @@ public class Bank {
         } else {
             Deposit dep = new Deposit(data, versamento);
             getAccount(num).addDeposito(data, dep);
-            System.out.println("Deposito: "+getAccount(num));
         }        
     }
     
@@ -94,16 +92,36 @@ public class Bank {
         elencoAccount.remove(num);
         return ris;
     }
-    public float getTotalDeposit() {
-        float ris=0;
-        return ris;
-    }
-
+    
     public void stampaElencoAcc() {
         String ris = "Banca: "+nomeBanca+"\n";
         Stream st = elencoAccount.values().stream();
         st.forEach(System.out::println);
     }
+        
+    /*--metodi da completare------*/
+    public float getTotalDeposit() {
+        float ris=0;
+        return ris;
+    }
+    
+    public List<Account> getAccounts() {
+        List<Account> ris = new ArrayList<>();
+        return ris;
+    }
+    
+    public List<Account> getAccountsByBalance(){
+        List<Account> ris = new ArrayList<>();
+        return ris;
+    }
+            
+    public float getPerCentHigher() {
+        float ris=0;
+        return ris;
+    }
+    /*--------------------fine metodi da completare-----------*/
+
+
 }
 
 

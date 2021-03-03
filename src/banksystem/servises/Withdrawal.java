@@ -24,7 +24,7 @@ public class Withdrawal extends Operation {
 
     @Override
     public String toString() {
-        return "Withdrawal{" + "data=" + getData() + ", importo=" + getImporto() + '}';
+        return "Prelievo{" + "data=" + getData() + ", importo=" + getImporto() + '\n';
     }
     
     

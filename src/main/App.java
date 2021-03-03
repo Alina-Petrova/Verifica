@@ -19,7 +19,7 @@ import java.util.logging.Logger;
 
 public class App {
     
-    public static void main(String[] args) throws InvalidCodeExeption{
+    public static void main(String[] args) throws InvalidCodeExeption, InvalidValueExeption{
         DateTimeFormatter format = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         Bank b1 = new Bank("Mia");
         try {
@@ -43,13 +43,18 @@ public class App {
         b1.deposit(LocalDate.parse("15/07/2011",format), 1, 1743);
         b1.deposit(LocalDate.parse("05/03/2011",format), 4, 700);
         b1.deposit(LocalDate.parse("19/10/2011",format), 3, 3050);
-        
+        b1.deposit(LocalDate.parse("28/02/2011",format), 2, 200);
+        b1.deposit(LocalDate.parse("15/01/2011",format), 1,45);
+        b1.deposit(LocalDate.parse("29/03/2011",format), 4, 20000);
+        b1.deposit(LocalDate.parse("19/08/2011",format), 3, 1000);
         System.out.println("----------------------------dopo depositi--------------------------------");
         b1.stampaElencoAcc();
         System.out.println("Eliminiamo: "+b1.deleteAccount(LocalDate.parse("12/11/2011", format), 3));
         System.out.println("------------------------------------------------------------");
         b1.stampaElencoAcc();
-        
+        System.out.println("------------------------------------------------------------");
+        b1.prelievo(LocalDate.parse("25/08/2011",format), 4, 1500);
+        System.out.println("I movimenti di George\n"+b1.getAccount(4).getMovements());
     }
     
 

@@ -21,8 +21,6 @@ public class Deposit extends Operation {
 
     @Override
     public String toString() {
-        return "Deposit{" + "data=" + getData() + ", importo=" + getImporto() + '}';
-    }
-
-    
+        return "Deposito{" + "data=" + getData() + ", importo=" + getImporto() + '\n';
+    }  
 }

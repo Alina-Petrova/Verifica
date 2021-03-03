@@ -80,19 +80,6 @@ public class Account implements Cloneable{
         setDataUltimaOp(data);
     }
 
-    /*public void addMovimento(LocalDate data, Operation mov) {
-        
-        if(mov.getClass().isInstance("Deposit")){
-            Deposit dep = new Deposit(data, mov.getImporto());
-            System.out.println("importo da dep= "+mov.getImporto());
-            elencoDepositi.add(dep);
-        } else {
-            Withdrawal with = new Withdrawal(data, mov.getImporto());
-            elencoPrelievi.add(with);
-        }
-        setSaldo(getSaldo()+mov.getImporto());
-    }*/
-
 
     
     public ArrayList<Operation> getMovements() {
